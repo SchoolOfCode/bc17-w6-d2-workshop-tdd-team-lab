@@ -76,15 +76,13 @@ export function calculateScrabbleScore(word) {
         Q: 10, Z: 10
     };
 
+    // Calculate the score
     let score = 0;
-
-    
-
-    for (let top of word) {
-        if (letterScores[top]) {
-            score = letterScores[top];
-        }
-    }
-
+    score = letterScores[word] || 0;
     return score;
 }
+
+
+
+
+
